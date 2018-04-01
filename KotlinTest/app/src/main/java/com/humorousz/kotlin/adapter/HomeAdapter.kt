@@ -5,7 +5,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.humorousz.kotlin.R
-import com.humorousz.kotlin.config.router.Router
+import com.humorousz.kotlin.config.router.RouterKt
 import com.humorousz.kotlin.home.HomeItemModel
 
 /**
@@ -14,7 +14,7 @@ import com.humorousz.kotlin.home.HomeItemModel
 class HomeAdapter(private val mContext:Context,private val mList:List<HomeItemModel>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(),HomeHolder.OnItemClickListener{
     override fun onItemClick(position: Int) {
         val link = mList[position].getLink()
-        Router.jumpTo(mContext, link)
+        RouterKt.jumpTo(mContext, link)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RecyclerView.ViewHolder {
