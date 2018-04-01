@@ -33,8 +33,8 @@ open abstract class BaseFragment : Fragment() {
         return view
     }
 
-    abstract fun createView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View
-    abstract fun initView(root: View)
+    abstract fun createView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View?
+    abstract fun initView(root: View?)
     fun getLogTitle(): String? {
         return null
     }

@@ -15,7 +15,7 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar!!.hide()
-        mFragment = HomeFragment.Companion.newInstance(Api.SECOND_MENU.MAIN)
+        mFragment = HomeFragment.newInstance(Api.SECOND_MENU.MAIN)
         val tr = supportFragmentManager.beginTransaction()
         tr.add(R.id.container, mFragment)
         tr.commit()

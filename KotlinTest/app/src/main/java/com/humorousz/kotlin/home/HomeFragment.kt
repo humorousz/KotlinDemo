@@ -26,15 +26,15 @@ class HomeFragment : BaseFragment() {
         type = arguments.getSerializable("type") as Api.SECOND_MENU
     }
 
-    override fun createView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return inflater!!.inflate(R.layout.layout_home_fragment, container, false)
+    override fun createView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater?.inflate(R.layout.layout_home_fragment, container, false)
     }
 
-    override fun initView(root: View) {
-        mRecyclerView = root.findViewById(R.id.recycler_home)
-        mRecyclerView!!.adapter = HomeAdapter(context, Api.getList(type))
-        mRecyclerView!!.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        mRecyclerView!!.addItemDecoration(GridItemDecoration(context))
+    override fun initView(root: View?) {
+        mRecyclerView = root?.findViewById(R.id.recycler_home)
+        mRecyclerView?.adapter = HomeAdapter(context, Api.getList(type))
+        mRecyclerView?.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+        mRecyclerView?.addItemDecoration(GridItemDecoration(context))
     }
 
 
