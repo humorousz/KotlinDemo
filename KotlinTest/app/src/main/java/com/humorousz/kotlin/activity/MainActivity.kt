@@ -7,6 +7,7 @@ import com.humorousz.kotlin.config.api.Api
 import com.humorousz.kotlin.demo.common.base.BaseActivity
 import com.humorousz.kotlin.demo.common.base.BaseFragment
 import com.humorousz.kotlin.home.HomeFragment
+import com.humorousz.kotlin.modle.PersonInfo
 
 class MainActivity : BaseActivity() {
     private val TAG:String = "MainActivity"
@@ -19,6 +20,18 @@ class MainActivity : BaseActivity() {
         val tr = supportFragmentManager.beginTransaction()
         tr.add(R.id.container, mFragment)
         tr.commit()
+    }
+
+
+    private fun test() {
+        var builder = PersonInfo.Person.newBuilder()
+        builder.setId(1)
+        builder.setName("zhangzhiquan")
+        val person = builder.build()
+
+
+
+
     }
 
 }
